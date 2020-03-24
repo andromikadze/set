@@ -1,0 +1,55 @@
+﻿<Window x:Class="Set.ResultWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Set"
+        mc:Ignorable="d" Title="Set by Andro Mikadze" Width="1920" Height="1080" WindowState="Maximized" WindowStyle="None" AllowsTransparency="True" ShowInTaskbar="False">
+    <Window.Background>
+        <SolidColorBrush Opacity="0"/>
+    </Window.Background>
+
+    <Grid Name="BlackBackground" Background="Black" Opacity="0.9" MouseDown="BlackBackground_MouseDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="8*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="8*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Viewbox Grid.Column="3" Grid.Row="1">
+            <TextBlock Name="Blue" Text=" Blue" Margin="5, 0, 0, 0" Foreground="Blue" FontFamily="{StaticResource InkFree}" FontStyle="Italic" TextAlignment="Center" VerticalAlignment="Stretch">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="180"/>
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Viewbox>
+        <Viewbox Grid.Column="5" Grid.Row="2">
+            <TextBlock Name="Yellow" Text="Yellow" Margin="0, 2, 0, 0" Foreground="Yellow" FontFamily="{StaticResource InkFree}" FontStyle="Italic" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="270"/>
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Viewbox>
+        <Viewbox Grid.Column="3" Grid.Row="3">
+            <TextBlock Name="Red" Text=" Red " Margin="2, 0, 3, 0" Foreground="Red" FontFamily="{StaticResource InkFree}" FontStyle="Italic" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="0"/>
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Viewbox>
+        <Viewbox Grid.Column="1" Grid.Row="2">
+            <TextBlock Name="Green" Text="Green" Margin="0, 0, 0, 2" Foreground="Green" FontFamily="{StaticResource InkFree}" FontStyle="Italic" TextAlignment="Center">
+                <TextBlock.LayoutTransform>
+                    <RotateTransform Angle="90"/>
+                </TextBlock.LayoutTransform>
+            </TextBlock>
+        </Viewbox>
+    </Grid>
+</Window>

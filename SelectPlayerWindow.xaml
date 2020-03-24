@@ -1,0 +1,31 @@
+﻿<Window x:Class="Set.SelectPlayerWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Set"
+        mc:Ignorable="d" Title="Set by Andro Mikadze" Width="1920" Height="1080" WindowState="Maximized" WindowStyle="None" AllowsTransparency="True" ShowInTaskbar="False">
+    <Window.Background>
+        <SolidColorBrush Opacity="0"/>
+    </Window.Background>
+
+    <Grid Background="Black" Opacity="0.9">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="6*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Image Name="Blue" Grid.Column="3" Grid.Row="1" Source="Resources/UpArrow.jpg" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality" MouseDown="Blue_MouseDown"/>
+        <Image Name="Yellow" Grid.Column="5" Grid.Row="2" Source="Resources/RightArrow.jpg" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality" MouseDown="Yellow_MouseDown"/>
+        <Image Name="Red" Grid.Column="3" Grid.Row="3" Source="Resources/DownArrow.jpg" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality" MouseDown="Red_MouseDown"/>
+        <Image Name="Green" Grid.Column="1" Grid.Row="2" Source="Resources/LeftArrow.jpg" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality" MouseDown="Green_MouseDown"/>
+    </Grid>
+</Window>

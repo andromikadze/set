@@ -1,0 +1,50 @@
+﻿<Window x:Class="Set.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:local="clr-namespace:Set"
+        mc:Ignorable="d" Title="Set by Andro Mikadze" Width="1920" Height="1080" WindowState="Maximized" WindowStyle="None" AllowsTransparency="True">
+
+    <Grid Name="Table" MouseDown="Table_MouseDown">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="3*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+        <Grid.Background>
+            <ImageBrush ImageSource="Resources/Table.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+
+        <Image Name="A1" Grid.Row="1" Grid.Column="1" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="A2" Grid.Row="1" Grid.Column="3" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="A3" Grid.Row="1" Grid.Column="5" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="A4" Grid.Row="1" Grid.Column="7" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="A5" Grid.Row="1" Grid.Column="9" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+
+        <Image Name="B1" Grid.Row="3" Grid.Column="1" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="B2" Grid.Row="3" Grid.Column="3" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="B3" Grid.Row="3" Grid.Column="5" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="B4" Grid.Row="3" Grid.Column="7" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="B5" Grid.Row="3" Grid.Column="9" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+
+        <Image Name="C1" Grid.Row="5" Grid.Column="1" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="C2" Grid.Row="5" Grid.Column="3" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="C3" Grid.Row="5" Grid.Column="5" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="C4" Grid.Row="5" Grid.Column="7" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+        <Image Name="C5" Grid.Row="5" Grid.Column="9" Stretch="Fill" RenderOptions.BitmapScalingMode="HighQuality"/>
+    </Grid>
+</Window>

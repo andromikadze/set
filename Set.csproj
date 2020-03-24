@@ -1,0 +1,677 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FB73FD7D-7139-41B9-9552-83635064F48C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Set</RootNamespace>
+    <AssemblyName>Set</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>SetIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3BEA5E46A3798BAD858D33DF3DF6D96FAD2049D9</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Set_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="RedWindow.xaml.cs">
+      <DependentUpon>RedWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ResultWindow.xaml.cs">
+      <DependentUpon>ResultWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PauseWindow.xaml.cs">
+      <DependentUpon>PauseWindow.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="SelectPlayerWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="RedWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ResultWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PauseWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="SelectPlayerWindow.xaml.cs">
+      <DependentUpon>SelectPlayerWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Set_TemporaryKey.pfx" />
+    <Resource Include="Fonts\Inkfree.ttf" />
+    <Resource Include="Fonts\SitkaI.ttc" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Table.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bce1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bce1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bce2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bce2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bce3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bce3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcr1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcr2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcr3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcr3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcs1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcs1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcs2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcs2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcs3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bcs3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bde1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bde1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bde2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bde2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bde3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bde3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bdr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bdr1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bdr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bdr2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bdr3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bdr3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bds1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bds1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bds2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bds2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bds3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bds3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bse1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bse1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bse2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bse2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bse3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bse3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bsr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bsr1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bsr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bsr2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bsr3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bsr3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bss1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bss1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bss2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bss2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bss3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\bss3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gce1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gce1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gce2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gce2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gce3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gce3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcr1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcr2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcr3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcr3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcs1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcs1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcs2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcs2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcs3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gcs3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gde1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gde1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gde2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gde2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gde3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gde3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gdr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gdr1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gdr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gdr2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gdr3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gdr3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gds1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gds1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gds2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gds2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gds3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gds3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gse1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gse1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gse2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gse2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gse3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gse3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gsr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gsr1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gsr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gsr2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gsr3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gsr3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gss1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gss1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gss2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gss2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gss3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\gss3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rce1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rce1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rce2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rce2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rce3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rce3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcr1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcr2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcr3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcr3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcs1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcs1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcs2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcs2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcs3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rcs3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rde1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rde1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rde2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rde2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rde3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rde3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rdr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rdr1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rdr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rdr2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rdr3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rdr3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rds1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rds1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rds2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rds2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rds3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rds3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rse1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rse1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rse2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rse2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rse3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rse3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rsr1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rsr1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rsr2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rsr2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rsr3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rsr3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rss1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rss1_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rss2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rss2_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rss3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\rss3_2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\DownArrow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\LeftArrow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\RightArrow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\UpArrow.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="SetIcon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
